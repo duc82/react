@@ -32,7 +32,7 @@ const App = () => {
     }
 
     const newValues = { ...values, id: aiId + 1 };
-    setAiId(newValues.id);
+    setAiId((prev) => prev + 1);
     setMembers([...members, newValues]);
     localStorage.setItem("rows", JSON.stringify([...members, newValues]));
     setIsActiveSideBar(false);
