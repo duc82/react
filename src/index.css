@@ -13,7 +13,6 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-
   margin: 0 auto;
 }
 
@@ -83,10 +82,20 @@ tr:hover {
   column-gap: 20px;
 }
 
-.flex-center {
+.flex-end {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar-img {
+  border-radius: 10px;
 }
 
 .modal {
@@ -113,11 +122,14 @@ tr:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  visibility: hidden;
 }
 
 .overlay.active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 label {
